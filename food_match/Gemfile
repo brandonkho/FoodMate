@@ -43,5 +43,11 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'gps'
+  gem 'yelp'
+  gem 'faraday', '~> 0.9.2'
+  gem 'multipart-post' '~> 2.0.0'
+  gem 'faraday_middleware' '~> 0.10.0'
+  gem 'simple_oauth' '~> 0.3.1
 end
 
