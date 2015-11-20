@@ -3,7 +3,11 @@ class PagesController < ApplicationController
 
   end
 
+
   def main
 
   end 
+
+  def page
+  end
 end
