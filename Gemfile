@@ -46,8 +46,9 @@ group :development do
   gem 'gps'
   gem 'yelp'
   gem 'faraday', '~> 0.9.2'
-  gem 'multipart-post' '~> 2.0.0'
-  gem 'faraday_middleware' '~> 0.10.0'
-  gem 'simple_oauth' '~> 0.3.1
+  gem 'multipart-post', '~> 2.0.0'
+  gem 'faraday_middleware', '~> 0.10.0'
+  gem 'simple_oauth', '~> 0.3.1'
 end
 
+gem 'devise'
