@@ -11,11 +11,14 @@
 end
 
 # Make other trainers
-%w(Ash Gary Misty Brock).each do |name|
-  User.create name: name, email: name+"@pokeportal.com", password: 'password'
+%w(Kamran Leanne Kishan Brandon).each do |name|
+  user = User.create! name: name, email: name+"@pokeportal.com", password: 'password'
+  pref = user.preferences.create! name: "American"
+  pref.restaurants.create!(name: "McDonalds")
 end
 
 %w(Hungarian Iberian Indian Indonesian Irish Italian Japanese Korean Kosher Laotian).each do |name|
   Preference.create name: name
 end
+
 

@@ -5,7 +5,7 @@ class PagesController < ApplicationController
 
 
   def main
-
+  	@users = User.all
   end 
 
   def page
