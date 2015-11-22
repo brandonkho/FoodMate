@@ -24,6 +24,7 @@ default: &default
 development:
   <<: *default
   database: foodmate_development
+  template: template0
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -31,7 +32,9 @@ development:
 test:
   <<: *default
   database: foodmate_test
+  template: template0
 
 production:
   <<: *default
   database: foodmate_production
+  template: template0
