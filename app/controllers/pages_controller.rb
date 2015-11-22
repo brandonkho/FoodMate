@@ -9,5 +9,7 @@ class PagesController < ApplicationController
   end 
 
   def page
+ 	@query = Yelp.client.search('San Francisco', { term: 'food' })
   end
+
 end
