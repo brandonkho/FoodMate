@@ -1,0 +1,28 @@
+<div class="row marketing">
+  <div class="col-lg-6">
+    <% @users.each do |user| %>
+      <h1><%= user.name %></h1>
+      <% if user.preferences.size == 0 then %>
+      	No preferences!
+      <% else %>
+	      <ul>
+	        <% user.preferences.each do |preference| %>
+	          <li><h3><%= preference.name %></h3></li>
+            <h2>Restaurants for the above preference:</h2>
+            <ul>
+              <% preference.restaurants.each do |restaurant| %>
+                <li><h3><%= restaurant.name %></h3></li>
+              <% end %>
+            </ul>
+            <br>
+	        <% end %>
+	      </ul>
+      <% end %> 
+      <br>
+    <% end %>
+  </div>
+</div>
+<div class="footer">
+  <p>&copy; Testing </p>
+</div>
+ 
