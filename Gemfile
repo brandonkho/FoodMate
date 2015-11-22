@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -44,11 +44,13 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'gps'
-  gem 'yelp'
   gem 'faraday', '~> 0.9.2'
   gem 'multipart-post', '~> 2.0.0'
   gem 'faraday_middleware', '~> 0.10.0'
   gem 'simple_oauth', '~> 0.3.1'
 end
 
+gem 'yelp', require: 'yelp'
 gem 'devise'
+gem 'rails_12factor', group: :production
+ruby "2.2.0"
