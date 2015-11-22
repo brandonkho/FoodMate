@@ -21,6 +21,10 @@ h6 {
   font-family: myfont;
 }
 
+.center{
+  text-align: center;
+}
+
 #logo{
   font-size: 30px;
   color: red;

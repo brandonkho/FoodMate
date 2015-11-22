@@ -9,10 +9,7 @@ class PagesController < ApplicationController
   end 
 
   def page
+ 	@query = Yelp.client.search('San Francisco', { term: 'food' })
   end
-  def show 
-      @prefs = Preference.all
-      @users = User.all
-      @foods = Food.all
-  end
+
 end
