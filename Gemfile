@@ -53,4 +53,5 @@ end
 gem 'yelp', require: 'yelp'
 gem 'devise'
 gem 'rails_12factor', group: :production
+gem 'simple_form'
 ruby "2.2.0"
