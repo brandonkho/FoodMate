@@ -1,5 +1,6 @@
 <h1 class="heading wow">Enter your Information</h1>
     <%= simple_form_for @user, :url => new_user_path do |f| %>
+    <%= f.input :zipcode, label: 'Your zipcode', error: 'Zipcode is mandatory, please specify one' %>
     <%= f.input :email, label: 'Your email', error: 'Zipcode is mandatory, please specify one' %>
     <%= f.input :password, label: 'Enter a Password', error: 'Zipcode is mandatory, please specify one' %>
     <%= f.input :name, label: 'Your First and last name separated by a space', error: 'Zipcode is mandatory, please specify one' %>
