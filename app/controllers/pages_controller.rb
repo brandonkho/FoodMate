@@ -9,7 +9,11 @@ class PagesController < ApplicationController
   end 
 
   def page
- 	@query = Yelp.client.search('San Francisco', { term: 'food' })
+ 	  
   end
 
+  def restaurant_query
+    category = params[:category]
+    @query = Yelp.client.search('Berkeley', { term: category })
+  end
 end

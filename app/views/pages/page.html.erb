@@ -92,7 +92,11 @@
                      
                         <h1 class="heading wow fadeInUp" data-wow-duration="400ms" data-wow-delay="500ms" >Find a Mate!</span> </br> 
                         </h1>
-                        <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="600ms"></p>
+                        <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="600ms">
+                            <% unless @query.nil? %>
+                                <%= @query.businesses %>
+                            <% end %>
+                        </p>
                     </div>
                 </div><!-- .col-md-12 close -->
             </div><!-- .row close -->
@@ -105,8 +109,8 @@
     <br>
     <h3> What are you craving?</h3>  
     <br>
-    <%= button_to "Sweet", :class => "button medium", :method => :patch %>
-    <%= button_to "Savory", :class => "button medium", :method => :patch %>
+    <%= button_to "Sweet", restaurant_query_path(category: 'sweet'), :class => "button medium", :method => :post %>
+    <%= button_to "Savory", restaurant_query_path(category: 'savory'), :class => "button medium", :method => :post %>
     <br>
     </div>
 
