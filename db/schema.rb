@@ -28,11 +28,6 @@ ActiveRecord::Schema.define(version: 20151122195222) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "preferences_users", id: false, force: :cascade do |t|
-    t.integer "user_id",       null: false
-    t.integer "preference_id", null: false
-  end
-
   create_table "restaurants", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at",    null: false

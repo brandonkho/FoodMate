@@ -13,13 +13,19 @@ body {
 }
 h1,
 h2,
-h3,
+h3, 
 h4,
 h5,
 h6 {
   margin: 0px;
   font-family: Candara;
 }
+
+.foods{ 
+  background-color:#FA8258; vertical-align: block; position: relative; width: 50%;
+     margin: 50 auto; float:left;;
+}
+
 
 .center{
   text-align: center;
@@ -78,7 +84,7 @@ a:active {
 --*/
 .heading {
   text-align: center;
-  font-weight: 500;
+  font-weight: 500; 
   color: #2E2E2E;
   padding: 40px 0px;
   position: relative;

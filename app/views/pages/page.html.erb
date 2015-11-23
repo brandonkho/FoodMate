@@ -92,11 +92,7 @@
                      
                         <h1 class="heading wow fadeInUp" data-wow-duration="400ms" data-wow-delay="500ms" >Find a Mate!</span> </br> 
                         </h1>
-                        <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="600ms">
-                            <% unless @query.nil? %>
-                                <%= @query.businesses %>
-                            <% end %>
-                        </p>
+                        
                     </div>
                 </div><!-- .col-md-12 close -->
             </div><!-- .row close -->
@@ -105,23 +101,21 @@
     <!--
     Button not finish routing
     ============================ -->
-    <div class="center">
-    <br>
-    <h3> What are you craving?</h3>  
-    <br>
-    <%= button_to "Sweet", restaurant_query_path(category: 'sweet'), :class => "button medium", :method => :post %>
-    <%= button_to "Savory", restaurant_query_path(category: 'savory'), :class => "button medium", :method => :post %>
-    <%= button_to "Spicy", restaurant_query_path(category: 'spicy'), :class => "button medium", :method => :post %>
-    <%= button_to "Cheesy", restaurant_query_path(category: 'cheesy'), :class => "button medium", :method => :post %>
-    <%= button_to "Crispy", restaurant_query_path(category: 'crispy'), :class => "button medium", :method => :post %>
-    <%= button_to "Organic", restaurant_query_path(category: 'organic'), :class => "button medium", :method => :post %>
-    <%= button_to "Grilled", restaurant_query_path(category: 'grilled'), :class => "button medium", :method => :post %>
-    <%= button_to "Vegetarian", restaurant_query_path(category: 'vegetarian'), :class => "button medium", :method => :post %>
-    <%= button_to "Barbecue", restaurant_query_path(category: 'barbecue'), :class => "button medium", :method => :post %>
-    <%= button_to "Alcoholic", restaurant_query_path(category: 'alcoholic'), :class => "button medium", :method => :post %>
+    
 
-    <br>
+    <div class = "center form-actions"> 
+        <%= button_to "Sweet", restaurant_query_path(category: 'sweet'), :class => "btn btn-primary foods", :method => :post %> 
+        <%= button_to "Savory", restaurant_query_path(category: 'savory'), :class => "btn btn-primary foods", :method => :post %> 
+        <%= button_to "Spicy", restaurant_query_path(category: 'spicy'), :class => "btn btn-primary foods", :method => :post %> 
+        <%= button_to "Cheesy", restaurant_query_path(category: 'cheesy'), :class => "btn btn-primary foods", :method => :post %> 
+        <%= button_to "Crispy", restaurant_query_path(category: 'crispy'), :class => "btn btn-primary foods", :method => :post %>
+         <%= button_to "Organic", restaurant_query_path(category: 'organic'), :class => "btn btn-primary foods", :method => :post %> 
+         <%= button_to "Grilled", restaurant_query_path(category: 'grilled'), :class => "btn btn-primary foods", :method => :post %> 
+         <%= button_to "Vegetarian", restaurant_query_path(category: 'vegetarian'), :class => "btn btn-primary foods", :method => :post %> 
+         <%= button_to "Barbecue", restaurant_query_path(category: 'barbecue'), :class => "btn btn-primary foods", :method => :post %> 
+         <%= button_to "Alcoholic", restaurant_query_path(category: 'alcoholic'), :class => "btn btn-primary foods", :method => :post %>
     </div>
+
 
     <!--
     footer  start
