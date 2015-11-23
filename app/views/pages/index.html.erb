@@ -65,7 +65,7 @@
                                 <span class="icon-bar"></span>
                               </button>
                                   <a class="navbar-brand" href="#">
-                                    <a id="logo">FoodMate</a>
+                                    <a id="logo" href="/">FoodMate</a>
                                   </a>
 
                             </div>
@@ -73,17 +73,15 @@
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                               <ul class="nav navbar-nav navbar-right" id="top-nav">
-                                <li><a href="#hero-area">Home</a></li>
-                                <li><a href="page">Find Mates</a></li>
-                                <li>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/page">Find Mates</a></li>
                                   <% if user_signed_in? %>
-                                    <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
+                                    <li><%= link_to "Profile", user_path(current_user.id) %></li>
+                                    <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
                                   <% else %>
-                                    <%= link_to "Sign In", new_user_session_path %></li>
-                                    <li>
-                                        <%= link_to "Register", new_user_registration_path %>
+                                    <li><%= link_to "Sign In", new_user_session_path %></li>
+                                    <li><%= link_to "Register", new_user_registration_path %></li>
                                   <% end %>
-                                </li>
                               </ul>
                             </div><!-- /.navbar-collapse -->
                           </div><!-- /.container-fluid -->
@@ -106,14 +104,14 @@
                 <div class="col-md-12">
                     <div class="block">
                         <img class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms" src="assets/cooker-img.png" alt="cooker-img">
-                        <h1 class="heading wow fadeInUp" data-wow-duration="400ms" data-wow-delay="500ms" >Food Mate</span> </br> Is Where you find your <span>Mates</span>
+                        <h1 class="heading wow fadeInUp" data-wow-duration="400ms" data-wow-delay="500ms" >FoodMate</span> </br> is where you find your <span>Mates</span><br><br>
                         
     <%= button_to "Get Started", new_user_registration_path, :class => "button medium", :method => :get%>
 
                         </h1>
                         
                         <br>
-                        <div style="margin-left: 15%;">
+                        <div style="margin-left: 7.5%;">
                             <div class="fb-like" data-href="https://damp-citadel-7054.herokuapp.com/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
                         </div>
                         
