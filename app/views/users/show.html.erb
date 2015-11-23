@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title> User Profile</title>
+		<title> </title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- CSS
@@ -89,13 +89,10 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="block">
-                        <h1 class="heading wow fadeInUp" data-wow-duration="400ms" data-wow-delay="500ms" >User Profile</span> </br> 
-                        	<p>Name: <%= @user.name if @user.name %></p>
+                        <h1 class="heading wow fadeInUp" data-wow-duration="400ms" data-wow-delay="500ms" ><%= @user.name %>'s Profile</span> </br> 
 							<p>Email: <%= @user.email if @user.email %></p>
 							<p id="notice"><%= notice %></p>
-
 							<p>
-							  <strong>Avatar:</strong>
 							  <%= image_tag @user.avatar.url(:large) %>
 							</p>
 
