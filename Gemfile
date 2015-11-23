@@ -53,4 +53,7 @@ end
 gem 'yelp', require: 'yelp'
 gem 'devise'
 gem 'rails_12factor', group: :production
-ruby "2.2.0"
+
+# Paperclip for image uploading
+gem "paperclip", "~> 4.3"
+ruby "2.2.1"
