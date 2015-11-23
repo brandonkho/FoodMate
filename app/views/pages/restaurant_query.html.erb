@@ -1,0 +1,7 @@
+<h1>Restaurants:</h1>
+
+<% unless @query.nil? %>
+  <% @query.businesses.each do |business| %>
+    - <%= business.name %><br>
+  <% end %>
+<% end %>
