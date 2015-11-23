@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
       :retina   => ['1200>',     :jpg, :quality => 30]
     },
     :default_style => :large,
-    :default_url => '/assets/images/howard.jpg',
+    :default_url => ActionController::Base.helpers.asset_path("images/howard.jpg"),
     :convert_options => {
       :thumb    => '-set colorspace sRGB -strip',
       :preview  => '-set colorspace sRGB -strip',
