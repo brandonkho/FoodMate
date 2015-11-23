@@ -58,3 +58,5 @@ gem 'simple_form'
 # Paperclip for image uploading
 gem "paperclip", "~> 4.3"
 ruby "2.2.0"
+
+gem 'zip-codes'
