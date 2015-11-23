@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root to: "pages#index"
   get "/page" => "pages#page"
   get "main", to: "pages#main", as: "main"
+  post '/rqresults' => 'pages#restaurant_query', as: :restaurant_query
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

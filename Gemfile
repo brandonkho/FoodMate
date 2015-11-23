@@ -54,4 +54,7 @@ gem 'yelp', require: 'yelp'
 gem 'devise'
 gem 'rails_12factor', group: :production
 gem 'simple_form'
+
+# Paperclip for image uploading
+gem "paperclip", "~> 4.3"
 ruby "2.2.0"
