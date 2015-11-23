@@ -32,6 +32,14 @@
     <script src="js/main.js"></script>
 	</head>
 	<body>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
 	<!--
 	header-img start 
 	============================== -->
@@ -93,9 +101,14 @@
                         <h1 class="heading wow fadeInUp" data-wow-duration="400ms" data-wow-delay="500ms" >Food Mate</span> </br> Is Where you find your <span>Mates</span>
                         
     <%= button_to "Get Started", new_user_path, :class => "button medium", :method => :get%>
-                        
 
                         </h1>
+                        
+                        <br>
+                        <div style="margin-left: 15%;">
+                            <div class="fb-like" data-href="https://damp-citadel-7054.herokuapp.com/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+                        </div>
+                        
                         <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="600ms"></p>
                     </div>
                 </div><!-- .col-md-12 close -->
