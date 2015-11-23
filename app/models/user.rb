@@ -7,12 +7,14 @@ class User < ActiveRecord::Base
   has_attached_file :avatar, 
 	  :url  => "/assets/users/:id/:style/:basename.:extension",
       :path => ":rails_root/public/assets/users/:id/:style/:basename.:extension",
-  :styles => {
+  	:styles => {
       :thumb    => ['100x100#',  :jpg, :quality => 70],
       :preview  => ['480x480#',  :jpg, :quality => 70],
       :large    => ['600>',      :jpg, :quality => 70],
       :retina   => ['1200>',     :jpg, :quality => 30]
     },
+    :default_style => :large,
+    :default_url => "/images/default_:style_howard.jpg",
     :convert_options => {
       :thumb    => '-set colorspace sRGB -strip',
       :preview  => '-set colorspace sRGB -strip',
@@ -20,6 +22,12 @@ class User < ActiveRecord::Base
       :retina   => '-set colorspace sRGB -strip -sharpen 0x0.5'
     }
 
-  validates_attachment_content_type :avatar, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
+  validates_attachment :avatar,
+    :presence => true,
+    :size => { :in => 0..10.megabytes },
+    :content_type => { :content_type => /^image\/(jpeg|png|gif|tiff)$/ }
 
+  validates :name,
+    :presence => true,
+    :uniqueness => true
 end
