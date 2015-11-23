@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
       :retina   => ['1200>',     :jpg, :quality => 30]
     },
     :default_style => :large,
-    :default_url => "/images/default_:style_howard.jpg",
+    :default_url => '/assets/images/:style/howard_large.jpg',
     :convert_options => {
       :thumb    => '-set colorspace sRGB -strip',
       :preview  => '-set colorspace sRGB -strip',
@@ -22,12 +22,6 @@ class User < ActiveRecord::Base
       :retina   => '-set colorspace sRGB -strip -sharpen 0x0.5'
     }
 
-  validates_attachment :avatar,
-    :presence => true,
-    :size => { :in => 0..10.megabytes },
-    :content_type => { :content_type => /^image\/(jpeg|png|gif|tiff)$/ }
+  validates_attachment_content_type :avatar, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 
-  validates :name,
-    :presence => true,
-    :uniqueness => true
 end
