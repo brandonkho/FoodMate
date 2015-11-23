@@ -7,7 +7,7 @@
     Common Css
 --*/
 body {
-  font-family: myfont;
+  font-family: Candara;
   font-size: 14px;
   font-weight: 400;
 }
@@ -18,7 +18,7 @@ h4,
 h5,
 h6 {
   margin: 0px;
-  font-family: myfont;
+  font-family: Candara;
 }
 
 .center{
