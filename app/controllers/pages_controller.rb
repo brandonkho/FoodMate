@@ -22,5 +22,30 @@ class PagesController < ApplicationController
     
     category = params[:category]
     @query = Yelp.client.search(city, { term: category })
+    pref = Preference.create name: category
+    if user_signed_in?
+      current_user.preferences << pref
+      
+      # Find the user a mate!
+      users = User.all
+      if users.length > 1
+        @mate = User.find(rand(1..users.length))
+        until @mate.id != current_user.id do
+          @mate = User.find(rand(1..users.length))
+        end
+    
+        # This is really inefficient but who cares right now
+        potential_mates = Array.new
+        users.each do |user|
+          if user.zipcode == current_user.zipcode
+            potential_mates.push(user)
+          end
+        end
+        
+        if potential_mates.any?
+          @mate = potential_mates[rand(0..(potential_mates.length - 1))]
+        end
+      end
+    end
   end
 end

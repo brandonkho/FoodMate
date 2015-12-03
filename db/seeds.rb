@@ -27,7 +27,7 @@ end
 # Users
 count = 1
 %w(Kamran Leanne Kishan Brandon).each do |name|
-  user = User.create! name: name, email: name+"@pokeportal.com", password: 'password'
+  user = User.create! name: name, email: name+"@pokeportal.com", password: 'password', zipcode: 94720
   user.preferences << Preference.find(count)
   user.preferences << Preference.find(count + 1)
   count += 2

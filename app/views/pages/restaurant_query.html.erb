@@ -4,4 +4,12 @@
   <% @query.businesses.each do |business| %>
     - <%= business.name %><br>
   <% end %>
+  
+  <br>
+  <h1>Your mate:</h1>
+  <% if @mate.nil? %>
+    - Sorry, but you're gonna be forever alone.
+  <% else %>
+    - <%= @mate.name %> (<%= @mate.zipcode %>)
+  <% end %>
 <% end %>
