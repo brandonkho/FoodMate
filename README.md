@@ -3,7 +3,7 @@
 
 **Team members**: Kishan Panchal, Leanne Lee, Kamran Siddiqui, Sagang Wee, Brandon Kho, Owen Jow
 
-**Demo link**: https://damp-citadel-7054.herokuapp.com/
+**Demo link**: https://food-mate.herokuapp.com/
 
 **YouTube link**: https://youtu.be/sOvLwIYqETc
 
