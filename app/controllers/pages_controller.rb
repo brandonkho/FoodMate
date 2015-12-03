@@ -37,7 +37,7 @@ class PagesController < ApplicationController
         # This is really inefficient but who cares right now
         potential_mates = Array.new
         users.each do |user|
-          if user.zipcode == current_user.zipcode
+          if user.zipcode == current_user.zipcode && user.id != current_user.id
             potential_mates.push(user)
           end
         end
